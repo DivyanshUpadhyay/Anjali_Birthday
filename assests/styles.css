@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i');
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: #6e6e6e;
+    font-size: 1.6rem;
+    background: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 6rem;
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 8rem;
+    color: aliceblue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.holder {
+    width: 10rem;
+    height: 40rem;
+    position: relative;
+}
+
+.holder *, .holder *:before, .holder *:after {
+    position: absolute;
+    content: "";
+}
+
+.candle {
+    bottom: 0;
+    width: 100%;
+    height: 30rem;
+    border-radius: 15rem / 4rem;
+    box-shadow: inset 2rem -2rem 5rem 0 rgba(0, 0, 0, 0.4), inset -2rem 0 5rem 0 rgba(0, 0, 0, 0.4);
+    background: linear-gradient(-45deg,#1093df, #009fbb, #0ad480, #ff46d7,#1190f8, #b9ff17, #1c0900);
+}
+
+.candle:before {
+    width: 100%;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.2rem solid #ff1515;
+    background: radial-gradient(#ff6739, #f0231c 45%, #b86409 80%);
+}
+
+.candle:after {
+    width: 3.4rem;
+    height: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    top: 1.4rem;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+    background: radial-gradient(rgba(0, 0, 0, 0.6), transparent 45%);
+}
+
+.thread {
+    width: 0.6rem;
+    height: 3.6rem;
+    top: -1.7rem;
+    left: 50%;
+    z-index: 1;
+    border-radius: 40% 40% 0 0;
+    transform: translateX(-50%);
+    background: linear-gradient(#d6994a, #4b232c, #121212, black, #e8bb31 90%);
+}
+
+.flame {
+    width: 2.4rem;
+    height: 12rem;
+    left: 50%;
+    transform-origin: center bottom;
+    transform: translateX(-50%);
+    bottom: 100%;
+    border-radius: 50% 50% 20% 20%;
+    background: linear-gradient(white 80%, transparent);
+    animation: moveFlame 6s linear infinite, enlargeFlame 5s linear infinite;
+}
+
+.flame:before {
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 20% 20%;
+    box-shadow: 0 0 1.5rem 0 rgba(247, 93, 0, .4), 0 -0.6rem 0.4rem 0 rgba(247, 128, 0, .7);
+}
+
+@keyframes moveFlame {
+    0%, 100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    25% {
+        transform: translateX(-50%) rotate(-2deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(2deg);
+    }
+    75% {
+        transform: translateX(-50%) rotate(-1deg);
+    }
+}
+
+@keyframes enlargeFlame {
+    0%, 100% {
+        height: 12rem;
+    }
+    50% {
+        height: 14rem;
+    }
+}
+
+.glow {
+    width: 2.6rem;
+    height: 6rem;
+    border-radius: 50% 50% 35% 35%;
+    left: 50%;
+    top: -4.8rem;
+    transform: translateX(-50%);
+    background: rgba(0, 133, 255, .7);
+    box-shadow: 0 -4rem 3rem 0 #dc8a0c, 0 4rem 5rem 0 #dc8a0c, inset 0.3rem 0 0.2rem 0 rgba(0, 133, 255, .6), inset -0.3rem 0 0.2rem 0 rgba(0, 133, 255, .6);
+}
+
+.glow:before {
+    width: 70%;
+    height: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.blinking-glow {
+    width: 10rem;
+    height: 18rem;
+    left: 50%;
+    top: -55%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #ff6000;
+    filter: blur(6rem);
+    animation: blinkIt .1s infinite;
+}
+
+@keyframes blinkIt {
+    50% { opacity: .8;}
+}
+
+button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: none;
+    background-color: #ffcc00;
+    color: #000;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .holder {
+        width: 10rem;
+        height: 30rem;
+    }
+
+    .candle {
+        height: 20rem;
+        border-radius: 10rem / 4rem;
+    }
+
+    .flame {
+        height: 10rem;
+    }
+
+    @keyframes enlargeFlame {
+        0%, 100% {
+            height: 10rem;
+        }
+        50% {
+            height: 12rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .holder {
+        width: 8rem;
+        height: 20rem;
+    }
+
+    .candle {
+        height: 16rem;
+        border-radius: 8rem / 4rem;
+    }
+
+    .flame {
+        height: 8rem;
+    }
+
+    @keyframes enlargeFlame {
+        0%, 100% {
+            height: 8rem;
+        }
+        50% {
+            height: 10rem;
+        }
+    }
+}
+.balloon {
+    width: 40px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: riseUp 4s ease-out infinite, sway 2s ease-in-out infinite alternate;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes riseUp {
+    0% {
+        bottom: 0;
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-150px) scale(1.2);
+    }
+    100% {
+        bottom: 100%;
+        transform: translateY(-300px) scale(0.8);
+    }
+}
+
+@keyframes sway {
+    0% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(-2px);
+    }
+}
