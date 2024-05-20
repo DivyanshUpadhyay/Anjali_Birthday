@@ -29,7 +29,11 @@ function handleLogin() {
     console.log("Entered Password:", enteredPassword); // Debugging statement
 
     if (enteredUsername === loginCredentials.username && enteredPassword === loginCredentials.password) {
+<<<<<<< HEAD
         window.location.href = "./assests/candles.html";
+=======
+        window.location.href = "/assests/candles.html"; 
+>>>>>>> fc682ada8ff28b8c8b430b19650edc62746f1644
     } else {
         displayErrorMessage("Oops! Incorrect username or password. Try again!!");
     }
