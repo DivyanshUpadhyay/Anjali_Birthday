@@ -15,7 +15,7 @@ function handleDateRedirection() {
     const isCorrectDate = isMay27_2024();
     console.log("Is it May 27, 2024?", isCorrectDate); // Debugging statement
     if (!isCorrectDate) {
-        window.location.href = "./assets/countdown.html";
+        window.location.href = "./assests/countdown.html";
         return true; // Indicate redirection happened
     }
     return false; // Indicate no redirection
@@ -29,7 +29,7 @@ function handleLogin() {
     console.log("Entered Password:", enteredPassword); // Debugging statement
 
     if (enteredUsername === loginCredentials.username && enteredPassword === loginCredentials.password) {
-        window.location.href = "./assets/candles.html";
+        window.location.href = "./assests/candles.html";
     } else {
         displayErrorMessage("Oops! Incorrect username or password. Try again!!");
     }
