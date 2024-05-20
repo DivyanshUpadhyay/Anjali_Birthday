@@ -13,9 +13,9 @@ function isMay27_2024() {
 // Function to redirect based on the date
 function handleDateRedirection() {
     const isCorrectDate = isMay27_2024();
-    console.log("Is it May 27, 2024? ", isCorrectDate); // Debugging statement
+    console.log("Is it May 27, 2024?", isCorrectDate); // Debugging statement
     if (!isCorrectDate) {
-        window.location.href = "/assests/countdown.html";
+        window.location.href = "./assests/countdown.html";
         return true; // Indicate redirection happened
     }
     return false; // Indicate no redirection
@@ -25,19 +25,24 @@ function handleDateRedirection() {
 function handleLogin() {
     const enteredUsername = document.getElementById("username").value;
     const enteredPassword = document.getElementById("password").value;
-    console.log("Entered Username: ", enteredUsername); // Debugging statement
-    console.log("Entered Password: ", enteredPassword); // Debugging statement
+    console.log("Entered Username:", enteredUsername); // Debugging statement
+    console.log("Entered Password:", enteredPassword); // Debugging statement
 
     if (enteredUsername === loginCredentials.username && enteredPassword === loginCredentials.password) {
-        window.location.href = "./assests/candles.html"; 
+        window.location.href = "./assests/candles.html";
     } else {
-        const errorMessage = document.getElementById("error");
-        errorMessage.textContent = "Oops! Incorrect username or password. Try again!!";
-        errorMessage.classList.add("show"); // Show the error message
-        setTimeout(function() {
-            errorMessage.classList.remove("show"); // Hide the error message after 5 seconds
-        }, 5000);
+        displayErrorMessage("Oops! Incorrect username or password. Try again!!");
     }
+}
+
+// Function to display error message
+function displayErrorMessage(message) {
+    const errorMessage = document.getElementById("error");
+    errorMessage.textContent = message;
+    errorMessage.classList.add("show"); // Show the error message
+    setTimeout(() => {
+        errorMessage.classList.remove("show"); // Hide the error message after 5 seconds
+    }, 5000);
 }
 
 // Event listener for form submission
