@@ -1,0 +1,147 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(70, 70, 70, 0.719), rgba(0, 0, 0, 0.7)), url("InShot_20240519_221027588.gif");
+    background-size: cover;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .glow {
+    font-size: 36px;
+    animation: glow 2s linear infinite alternate;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+  }
+  
+  .timer-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .timer {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #f87d35 10%, #2984fc); /* Example gradient */
+    color: #fff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: pulse 1s infinite alternate;
+    min-width: 120px; /* Adjust as needed */
+  }
+  p{
+    font-size: 40px ;
+    color:yellow;
+    font-weight: bolder;
+  }
+  .yes-button,
+.no-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.yes-button {
+  background-color: #4CAF50;
+  color: white;
+}.yes-button:hover {
+  background-color: #4caf4fbe;
+  color: white;
+}
+
+.no-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.no-button:hover {
+    background-color: #9b0500;
+}
+
+  .number {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .text {
+    font-size: 18px;
+  }
+  
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    }
+    to {
+      text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00;
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .timer {
+      flex: 0 0 45%; /* Adjust as needed */
+    }
+  }
+  /* Add this CSS to style the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  

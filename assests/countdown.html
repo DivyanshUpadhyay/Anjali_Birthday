@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="countdown.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="glow">Your Gift is Unlocking in</h1>
+    <div class="timer-wrapper">
+      <div class="timer">
+        <span id="days" class="number">00</span>
+        <span class="text">Days</span>
+      </div>
+      <div class="timer">
+        <span id="hours" class="number">00</span>
+        <span class="text">Hours</span>
+      </div>
+      <div class="timer">
+        <span id="minutes" class="number">00</span>
+        <span class="text">Minutes</span>
+      </div>
+      <div class="timer">
+        <span id="seconds" class="number">00</span>
+        <span class="text">Seconds</span>
+      </div>
+    </div>
+    <p>Are You Excited!!!</p>
+    <div class="button-container">
+      <button id="yesButton" class="yes-button">Yes</button>
+      <button id="noButton" class="no-button">No</button>
+    </div>
+  </div>
+
+  <!-- Card Modal -->
+  <div id="cardModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p style="color: deeppink;">Thank you for choosing "Yes"! Your surprise is on the way. Please wait.</p>
+    </div>
+  </div>
+  <div id="cardModala" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p style="color: deeppink;">Mtlb surprise nhi chaiye??</p>
+    </div>
+  </div>
+
+  <script src="countdown.js"></script>
+</body>
+</html>
