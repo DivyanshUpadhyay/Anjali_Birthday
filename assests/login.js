@@ -15,7 +15,7 @@ function handleDateRedirection() {
     const isCorrectDate = isMay27_2024();
     console.log("Is it May 27, 2024? ", isCorrectDate); // Debugging statement
     if (!isCorrectDate) {
-        window.location.href = "./assests/countdown.html";
+        window.location.href = "/assests/countdown.html";
         return true; // Indicate redirection happened
     }
     return false; // Indicate no redirection
