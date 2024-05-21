@@ -6,6 +6,11 @@ document.getElementById('blowOutButton').addEventListener('click', function() {
 
     createBalloons();
     playBackgroundMusic();
+
+    // Redirect to wish.html after 8 seconds
+    setTimeout(function() {
+        window.location.href = 'wish.html';
+    }, 8000);
 });
 
 document.getElementById('popButton').addEventListener('click', function() {

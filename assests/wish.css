@@ -95,7 +95,16 @@ body {
     top: 95px;
     left: 43px;
    }
-   
+   .btn {
+    background: crimson;
+    color: #fff;
+    border: none;
+    margin-left: 5px;
+    margin-top: 40px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
    .balloonOne:after,
    .balloonTwo:after,
    .balloonThree:after,
