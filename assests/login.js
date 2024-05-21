@@ -10,17 +10,6 @@ function isMay27_2024() {
     return currentDate.getFullYear() === 2024 && currentDate.getMonth() === 4 && currentDate.getDate() === 27;
 }
 
-// Function to redirect based on the date
-function handleDateRedirection() {
-    const isCorrectDate = isMay27_2024();
-    console.log("Is it May 27, 2024?", isCorrectDate); // Debugging statement
-    if (!isCorrectDate) {
-        window.location.href = "./assests/countdown.html";
-        return true; // Indicate redirection happened
-    }
-    return false; // Indicate no redirection
-}
-
 // Function to handle login attempt
 function handleLogin() {
     const enteredUsername = document.getElementById("username").value;
@@ -29,7 +18,11 @@ function handleLogin() {
     console.log("Entered Password:", enteredPassword); // Debugging statement
 
     if (enteredUsername === loginCredentials.username && enteredPassword === loginCredentials.password) {
-        window.location.href = "./assests/candles.html";
+        if (isMay27_2024()) {
+            window.location.href = "./assests/candles.html";
+        } else {
+            window.location.href = "./assests/countdown.html";
+        }
     } else {
         displayErrorMessage("Oops! Incorrect username or password. Try again!!");
     }
@@ -48,10 +41,5 @@ function displayErrorMessage(message) {
 // Event listener for form submission
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the form from submitting
-
-    if (handleDateRedirection()) {
-        return; // Stop further execution if redirection happened
-    }
-
-    handleLogin(); // Proceed to handle login if no redirection happened
+    handleLogin(); // Proceed to handle login
 });

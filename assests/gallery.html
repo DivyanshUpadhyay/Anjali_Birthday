@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Rotating Gallery</title>
     <link rel="stylesheet" href="gallery.css" />
   </head>
   <body>
-    <div class="image-container">
+    <div class="image-container" data-aos="fade-down-right">
       <span style="--i: 1">
         <img
           src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGRvZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
@@ -49,12 +52,15 @@
         />
       </span>
     </div>
-
+    <audio id="backgroundMusic" src="./ANJALI.mp3" loop preload="auto" loop></audio>
     <div class="btn-container">
       <button class="btn" id="prev">Prev</button>
       <button class="btn" id="next">Next</button>
     </div>
 
     <script src="app.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

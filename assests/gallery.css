@@ -7,7 +7,7 @@ body {
     text-align: center;
     height: 100vh;
     background-color: black;
-    background-image: radial-gradient(rgba(92, 163, 255, 0.829),rgba(63, 146, 255, 0.315), rgb(0, 0, 0)), url("bg.gif");
+    background-image: linear-gradient(45deg,rgba(92, 163, 255, 0.829),rgba(63, 146, 255, 0.315),rgba(63, 233, 255, 0.315),rgba(82, 241, 143, 0.459), rgb(0, 0, 0)), url("bg.gif");
     overflow: hidden;
   }
   

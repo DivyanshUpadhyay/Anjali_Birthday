@@ -6,11 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Happy Birthday Anjali</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
   <link rel="stylesheet" href="wish.css">
 </head>
 
-<body>
+<body  data-aos="fade-right"
+data-aos-offset="300"
+data-aos-easing="ease-in-sine">
  <h2>Click this card</h2>
 <div class="body">
  <div class="birthdayCard">
@@ -32,13 +36,16 @@
 </div>
 
 </div>
-<footer><center>Design & Develop by <a href="https://praweensoni.netlify.app/">PK'S</a></center>
+<footer><center>Design & Develop by Divyansh</center>
 </footer>
   <script src="main.js"></script>
   <script>
     function redirectToGallery() {
       window.location.href = 'gallery.html';
     }
+  </script>
+  <script>
+    AOS.init();
   </script>
 </body>
 </html>

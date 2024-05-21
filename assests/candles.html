@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div>
-        <h1>&#127874; Happy Birthday Anjali !!! &#127874;</h1>
-        <div class="container">
+        <h1 data-aos="flip-left"
+        data-aos-easing="ease-in-cubic"
+        data-aos-duration="1500">&#127874; Happy Birthday Anjali !!! &#127874;</h1>
+        <div class="container" data-aos="flip-up"data-aos-duration="1500">
             <div class="cake">
                 <div class="holder">
                     <div class="candle">
@@ -57,5 +61,8 @@
     </div>
     <audio id="backgroundMusic" src="./ANJALI.mp3" loop></audio>
     <script src="script.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
